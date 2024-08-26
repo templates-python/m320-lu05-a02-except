@@ -3,12 +3,12 @@
     "name": "test_found",
     "function": "test_found",
     "timeout": 10,
-    "points": 2
+    "points": 1
   },
   {
     "name": "test_except",
     "function": "test_except",
     "timeout": 10,
-    "points": 2
+    "points": 1
   }
 ]
