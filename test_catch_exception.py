@@ -1,3 +1,4 @@
+from catch_exception import main
 from namelist import NameList
 
 
@@ -6,7 +7,8 @@ def test_found():
     value = names.take_name(3)
     assert value == 'Frida'
 
-def test_except():
-    names = NameList()
-    value = names.take_name(7)
-    assert value == 'foobar'
+
+def test_except(capsys):
+    main()
+    captured = capsys.readouterr()
+    assert captured.out == 'Konrad\nGreta\nMike\nFrida\nEphron\nlist index out of range\n'
